@@ -1,0 +1,14 @@
+.button {
+  width: 5rem;
+  height: 3rem;
+  border: none;
+  background-color: rgb(255, 229, 229);
+  border-radius: 20px;
+
+  font-size: 1.5rem;
+
+  border: 1px solid black;
+  margin: auto;
+
+  cursor: pointer;
+}
