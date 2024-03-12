@@ -1,14 +1,17 @@
 .button {
-  width: 5rem;
+  min-width: 6rem;
   height: 3rem;
   border: none;
-  background-color: rgb(255, 229, 229);
   border-radius: 20px;
 
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 
   border: 1px solid black;
   margin: auto;
 
   cursor: pointer;
+}
+
+.button:hover {
+  font-size: 1.4em;
 }
