@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 900px;
+}
+
+.title {
+  font-size: 2.5rem;
+}
+
+.explanation {
+  font-size: 1.5rem;
+  color: blue;
+}
