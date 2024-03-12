@@ -10,6 +10,7 @@ export default function QuestionItem({
   score,
 }: QuizItemPropsType) {
   const hasAnswered = answer !== null;
+
   return (
     <div className={styles.container}>
       <div className={styles.score}>

@@ -1,0 +1,32 @@
+.container {
+  margin-top: 1rem;
+  border: 2px solid gray;
+  border-radius: 15px;
+  padding: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.title {
+  font-size: 2rem;
+}
+
+.options {
+  font-size: 1.4rem;
+  display: flex;
+  gap: 2rem;
+}
+.answer {
+  color: blue;
+  font-weight: 600;
+}
+
+.wrong {
+  opacity: 0.3;
+}
+
+.explanation {
+  font-size: 1.5rem;
+  color: blue;
+}
