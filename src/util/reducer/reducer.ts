@@ -7,6 +7,8 @@ import {
 } from "../../_type/type";
 import { displayOptions } from "./initialState";
 import { reactQuizData } from "../../questions/reactQuestions";
+import { htmlQuizData } from "../../questions/htmlQuestion";
+import { CssQuizData } from "../../questions/cssQuestions";
 
 export function reducer(state: QuizState, action: QuizAction): QuizState {
   const { type, payload } = action;
@@ -36,7 +38,27 @@ export function reducer(state: QuizState, action: QuizAction): QuizState {
         wrongNote: [],
         display: displayOptions.ready as displayType,
       };
-    case "JAVASCRIPT":
+    case displayOptions.html:
+      return {
+        ...state,
+        answer: null,
+        index: 0,
+        score: 0,
+        questions: htmlQuizData,
+        wrongNote: [],
+        display: displayOptions.start as displayType,
+      };
+    case displayOptions.css:
+      return {
+        ...state,
+        answer: null,
+        index: 0,
+        score: 0,
+        questions: CssQuizData,
+        wrongNote: [],
+        display: displayOptions.start as displayType,
+      };
+    case displayOptions.javascript:
       return {
         ...state,
         answer: null,
@@ -46,7 +68,7 @@ export function reducer(state: QuizState, action: QuizAction): QuizState {
         wrongNote: [],
         display: displayOptions.start as displayType,
       };
-    case "REACT":
+    case displayOptions.react:
       return {
         ...state,
         answer: null,

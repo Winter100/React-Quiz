@@ -2,6 +2,8 @@ import { displayType, initialStateType } from "../../_type/type";
 
 export const displayOptions = {
   ready: "READY",
+  html: "HTML",
+  css: "CSS",
   javascript: "JAVASCRIPT",
   react: "REACT",
   start: "START",
