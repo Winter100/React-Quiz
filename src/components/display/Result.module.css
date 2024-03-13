@@ -4,18 +4,40 @@
   align-items: center;
   justify-content: center;
 
-  gap: 1rem;
+  gap: 10rem;
 }
 .result_info {
   display: flex;
   align-items: center;
 
-  gap: 1rem;
+  gap: 7rem;
   flex-direction: column;
-  font-size: 2rem;
+  font-size: 3rem;
+}
+
+.correct {
+  color: blue;
+}
+.wrong {
+  color: red;
 }
 
 .footer {
   display: flex;
   gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .result_info {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    gap: 10rem;
+  }
+  .result_info {
+    font-size: 2rem;
+    gap: 3rem;
+  }
 }

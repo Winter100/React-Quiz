@@ -5,6 +5,7 @@
   align-items: center;
   gap: 1rem;
   width: 900px;
+  margin-top: 1rem;
 }
 
 .title {
@@ -14,4 +15,28 @@
 .explanation {
   font-size: 1.5rem;
   color: blue;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin-top: 5rem;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .explanation {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin-top: 0;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .explanation {
+    font-size: 1.5rem;
+  }
 }

@@ -21,12 +21,12 @@ export default function QuestionItem({
           문제수: {index + 1} / {questionLength}
         </span>
       </div>
-      <div>
-        <h2>
-          <span className={styles.q_number}>{` [ ${index + 1} ]. `}</span>
-          <span className={styles.q_content}>{`${question.question}`}</span>
-        </h2>
-      </div>
+
+      <h2 className={styles.title_info}>
+        <span className={styles.q_number}>{` [ ${index + 1} ]. `}</span>
+        <span className={styles.q_content}>{`${question.question}`}</span>
+      </h2>
+
       <div className={styles.options}>
         {question.options.map((item, i) => (
           <button

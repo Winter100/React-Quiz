@@ -11,16 +11,17 @@ export default function Ready({
   dispatch: Dispatch<QuizAction>;
 }) {
   function handleClick(type: string) {
-    // 타입에 따라 문제 변경
     dispatch({ type });
   }
 
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.subTitle}>
         <SubTitle text="문제를 골라주세요!" />
       </div>
 
+      <Button text="HTML" onClick={() => handleClick(displayOptions.html)} />
+      <Button text="Css" onClick={() => handleClick(displayOptions.css)} />
       <Button
         text="자바스크립트"
         onClick={() => handleClick(displayOptions.javascript)}

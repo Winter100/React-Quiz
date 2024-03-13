@@ -1,10 +1,11 @@
 * {
   margin: 0;
-
   box-sizing: border-box;
   font-family: "Ownglyph_meetme-Rg";
 
   list-style: none;
+
+  max-width: 100%;
 }
 
 @font-face {

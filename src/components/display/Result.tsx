@@ -21,8 +21,12 @@ export default function Result({
       <SubTitle text="결과" size="4rem" />
       <div className={styles.result_info}>
         <span>최종점수: {score}점</span>
-        <span>정답수 {correct}개</span>
-        <span>오답수 {wrongLength}개</span>
+        <span>
+          정답 <span className={styles.correct}>{correct}</span>개
+        </span>
+        <span>
+          오답 <span className={styles.wrong}>{wrongLength}</span>개
+        </span>
       </div>
       <div className={styles.footer}>
         {wrongLength !== 0 && (

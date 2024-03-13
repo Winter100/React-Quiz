@@ -13,12 +13,12 @@ export default function Wrong({ wrongNote, dispatch }: WrongPropsType) {
 
   return (
     <div className={styles.container}>
-      <SubTitle text="오답노트" size="4rem" />
+      <SubTitle text="오답노트" size="4rem" color="#e72525" />
       <Button
         text="다시풀기"
         onClick={() => handlClick(displayOptions.ready)}
       />
-      <ul>
+      <ul className={styles.ul}>
         {wrongNote.map((wrongItem) => (
           <WrongItem key={wrongItem.question} wrongItem={wrongItem} />
         ))}

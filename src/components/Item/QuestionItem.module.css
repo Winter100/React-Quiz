@@ -10,6 +10,13 @@
   justify-content: space-around;
   font-size: 1.3rem;
 }
+
+.title_info {
+  color: rgb(53, 39, 255);
+  border-bottom: 2px solid gray;
+  min-height: 4rem;
+}
+
 .q_number {
   font-size: 1.5rem;
 }
@@ -32,10 +39,12 @@
   width: 90%;
   padding: 1rem;
   font-size: xx-large;
-  height: 3rem;
+  height: 4rem;
 
   display: flex;
   align-items: center;
+  text-align: left;
+
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
 }
@@ -57,4 +66,43 @@
 .answer {
   background-color: rgb(127, 246, 255);
   color: blue;
+}
+
+@media (max-width: 1024px) {
+  .options {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    gap: 1rem;
+  }
+
+  .title_info {
+    display: grid;
+    grid-template-columns: 17% 83%;
+    align-items: center;
+
+    text-align: left;
+  }
+
+  .q_number {
+    text-align: center;
+
+    font-size: 1.3rem;
+  }
+
+  .q_content {
+    font-size: 1.3rem;
+  }
+
+  .options {
+    gap: 1rem;
+  }
+
+  .option {
+    padding-left: 1rem;
+    font-size: 1.3rem;
+  }
 }
