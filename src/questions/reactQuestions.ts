@@ -189,7 +189,7 @@ export const reactQuizData = [
   },
   {
     question:
-      "React Hooks 중에서 컴포넌트의 생명주기 메서드를 함수형 컴포넌트에서 대체하는 역할을 하는 훅은 무엇인가요?",
+      "React Hooks 중에서 컴포넌트의 생명주기를 제어할 수 있는 훅은 무엇인가요?",
     options: ["A. useEffect", "B. useReducer", "C. useMemo", "D. useContext"],
     answer: 0,
     explanation:
@@ -209,7 +209,7 @@ export const reactQuizData = [
   },
   {
     question:
-      "React에서 'Higher Order Component (HOC)' 패턴을 사용할 때, 주로 어떤 문제를 해결하기 위해 활용되나요?",
+      "'Higher Order Component (HOC)' 패턴은 주로 어떤 문제를 해결하기 위해 활용되나요?",
     options: [
       "A. 상태 관리",
       "B. 라우팅 설정",
