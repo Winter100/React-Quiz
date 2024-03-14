@@ -16,10 +16,7 @@ export default function Ready({
 
   return (
     <div className={styles.container}>
-      <div className={styles.subTitle}>
-        <SubTitle text="문제를 골라주세요!" />
-      </div>
-
+      <SubTitle text="문제를 골라주세요!" color="blue" />
       <Button text="HTML" onClick={() => handleClick(displayOptions.html)} />
       <Button text="Css" onClick={() => handleClick(displayOptions.css)} />
       <Button

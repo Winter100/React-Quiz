@@ -3,14 +3,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  gap: 10rem;
+  height: 80dvh;
+  gap: 7rem;
 }
 .result_info {
   display: flex;
   align-items: center;
 
-  gap: 7rem;
+  gap: 6rem;
   flex-direction: column;
   font-size: 3rem;
 }
@@ -34,7 +34,7 @@
 }
 @media (max-width: 480px) {
   .container {
-    gap: 10rem;
+    gap: 6rem;
   }
   .result_info {
     font-size: 2rem;

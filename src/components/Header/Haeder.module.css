@@ -7,9 +7,3 @@
 
   font-size: 2rem;
 }
-
-@media (max-width: 480px) {
-  .container {
-    height: 200px;
-  }
-}

@@ -17,11 +17,17 @@ function App() {
   const [{ questions, index, answer, score, display, wrongNote }, dispatch] =
     useReducer(reducer, initialState);
 
+  const isDisplayTitle =
+    display === displayOptions.ready || display === displayOptions.start;
+
   return (
     <div className={styles.container}>
-      <Header>
-        <Title />
-      </Header>
+      {isDisplayTitle && (
+        <Header>
+          <Title />
+        </Header>
+      )}
+
       <Main>
         {display === displayOptions.ready && <Ready dispatch={dispatch} />}
         {display === displayOptions.start && (

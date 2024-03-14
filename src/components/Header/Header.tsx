@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./Haeder.module.css";
 
 export default function Header({ children }: { children: React.ReactNode }) {
