@@ -17,7 +17,9 @@ React의 useReducer기능을 활용한 프론트엔드 관련 문제 풀기 사�
 
 ## 사용 기술
 ***프론트*** : React, TypeScript
+
 ***CSS*** : module.css
+
 ***배포*** : Vercel
 
 <hr>
