@@ -1,7 +1,3 @@
-import { useReducer } from "react";
-import { displayOptions, initialState } from "./util/reducer/initialState";
-import { reducer } from "./util/reducer/reducer";
-
 import styles from "./App.module.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -13,9 +9,11 @@ import Ready from "./components/display/Ready";
 import Result from "./components/display/Result";
 import Wrong from "./components/display/Wrong";
 
+import { useQuiz } from "./hooks/useQuiz";
+import { displayOptions } from "./context/reducers/initialState";
+
 function App() {
-  const [{ questions, index, answer, score, display, wrongNote }, dispatch] =
-    useReducer(reducer, initialState);
+  const { display, answer } = useQuiz();
 
   const isDisplayTitle =
     display === displayOptions.ready || display === displayOptions.start;
@@ -27,32 +25,13 @@ function App() {
           <Title />
         </Header>
       )}
-
       <Main>
-        {display === displayOptions.ready && <Ready dispatch={dispatch} />}
-        {display === displayOptions.start && (
-          <Start
-            questions={questions}
-            index={index}
-            dispatch={dispatch}
-            answer={answer}
-            score={score}
-          />
-        )}
-        {display === displayOptions.result && (
-          <Result
-            score={score}
-            wrongLength={wrongNote?.length}
-            dispatch={dispatch}
-          />
-        )}
-        {display === displayOptions.wrong && (
-          <Wrong wrongNote={wrongNote} dispatch={dispatch} />
-        )}
+        {display === displayOptions.ready && <Ready />}
+        {display === displayOptions.start && <Start />}
+        {display === displayOptions.result && <Result />}
+        {display === displayOptions.wrong && <Wrong />}
       </Main>
-      <Footer>
-        {answer !== null && <Commentary questions={questions} index={index} />}
-      </Footer>
+      <Footer>{answer !== null && <Commentary />}</Footer>
     </div>
   );
 }

@@ -1,9 +1,10 @@
-import { QuizQuestion } from "../../_type/type";
 import styles from "./WrongItem.module.css";
+
+import { QuizQuestion } from "../../types/type";
 
 export default function WrongItem({ wrongItem }: { wrongItem: QuizQuestion }) {
   return (
-    <li className={styles.container}>
+    <div className={styles.container}>
       <h3 className={styles.title}>{wrongItem.question}</h3>
       <span className={styles.options}>
         {wrongItem.options.map((item, i) => (
@@ -17,6 +18,6 @@ export default function WrongItem({ wrongItem }: { wrongItem: QuizQuestion }) {
         ))}
       </span>
       <span className={styles.explanation}>{wrongItem.explanation}</span>
-    </li>
+    </div>
   );
 }

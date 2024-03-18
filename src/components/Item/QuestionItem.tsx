@@ -1,14 +1,12 @@
-import { QuizItemPropsType } from "../../_type/type";
 import styles from "./QuestionItem.module.css";
 
-export default function QuestionItem({
-  question,
-  index,
-  dispatch,
-  answer,
-  questionLength,
-  score,
-}: QuizItemPropsType) {
+import { useQuiz } from "../../hooks/useQuiz";
+
+export default function QuestionItem() {
+  const { answer, score, index, questions, dispatch } = useQuiz();
+
+  const question = questions[index];
+  const questionLength = questions.length;
   const hasAnswered = answer !== null;
 
   return (
