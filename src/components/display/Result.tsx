@@ -2,17 +2,13 @@ import Button from "../Button/Button";
 import SubTitle from "../Header/SubTitle";
 import styles from "./Result.module.css";
 
-import { ResultPropsType } from "../../_type/type";
-import { displayOptions } from "../../util/reducer/initialState";
+import { useQuiz } from "../../hooks/useQuiz";
+import { displayOptions } from "../../context/reducers/initialState";
+import { handleDispatch } from "../../utils/handleDispatch";
 
-export default function Result({
-  dispatch,
-  score = 0,
-  wrongLength,
-}: ResultPropsType) {
-  function handlClick(type: string) {
-    dispatch({ type });
-  }
+export default function Result() {
+  const { dispatch, score, wrongNote } = useQuiz();
+  const wrongLength = wrongNote.length;
 
   const correct = score !== 0 ? Number(score / 5) : 0;
 
@@ -32,12 +28,12 @@ export default function Result({
         {wrongLength !== 0 && (
           <Button
             text="오답노트"
-            onClick={() => handlClick(displayOptions.wrong)}
+            onClick={() => handleDispatch(dispatch, displayOptions.wrong)}
           />
         )}
         <Button
           text="다시풀기"
-          onClick={() => handlClick(displayOptions.ready)}
+          onClick={() => handleDispatch(dispatch, displayOptions.ready)}
         />
       </div>
     </div>
