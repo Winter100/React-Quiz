@@ -18,7 +18,9 @@ React의 useReducer기능을 활용한 프론트엔드 관련 문제 풀기 사�
 
 ## 사용 기술
 ***프론트*** : React(useContext, useReducer), TypeScript
+
 ***CSS*** : module.css
+
 ***배포*** : Vercel
 
 <hr>
@@ -56,7 +58,7 @@ React의 useReducer기능을 활용한 프론트엔드 관련 문제 풀기 사�
 
 ## 2024.03.18 추가) useContext로 리팩토링 후기
 
-**1. 코드가 깔끔해 졌다.**
+**1. 코드가 깔끔해 졌다. **
 
 ![리팩토링 후 App](https://velog.velcdn.com/images/winter109/post/18c0c3a7-2084-416b-90d3-10fb0c49531f/image.png)
 
@@ -69,7 +71,7 @@ React의 useReducer기능을 활용한 프론트엔드 관련 문제 풀기 사�
 
 <hr>
 
-**2. useContext를 사용할때 주의하기!**
+**2. useContext를 사용할때 주의하기! **
 ##### 크게 어렵지 않았는데 처음시작할때 한번 막힌게 있다. 약 10분정도 고민하다 결국 "아!" 하면서 떠올렸는데 Provider를 설정할때 주의하자
 
 
@@ -158,3 +160,20 @@ export default App;
 ```
 
 ##### 이후 잘 마무리했다!
+
+<hr>
+
+##### 흠.. 한가지 궁금한점이 있는데 useQuiz를 아래 코드처럼 짜고 사용했는데 잘못된 코드처럼 App에서 Provider와 useQuiz를 사용했을때 저 에러 코드가 떳어야 하지않을까..? 결국은 해결을 했지만 왜 다른 에러가 떴을까..? 궁금하다.. 고민을 해봐야겠다.
+
+```js
+import { useContext } from "react";
+import { QuizContext } from "../context/QuizContextProvider";
+
+export function useQuiz() {
+  const quiz = useContext(QuizContext);
+
+  if (!quiz) throw new Error("올바른 Context 범위 내에서 사용해주세요.");
+
+  return quiz;
+}
+```
